@@ -9,10 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Pavel Kalashnikov']
   spec.email         = ['kalashnikovisme@gmail.com']
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'TODO: Set to \'http://mygemserver.com\' to prevent pushes to rubygems.org, or delete to allow pushes to any server.'
-  end
-
   spec.summary       = %q{Bootstrap helpers}
   spec.description   = %q{Bootstrap helpers}
   spec.homepage      = 'https://github.com/kalashnikovisme/trap'
