@@ -1,5 +1,6 @@
-require "trap/version"
+require 'trap/version'
+require 'trap/helpers/bootstrap_helper'
 
 module Trap
-  # Your code goes here...
+  include BootstrapHelper
 end
