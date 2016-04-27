@@ -28,7 +28,7 @@ module BootstrapHelper
   end
 
   def icon_element(name)
-    content_tag :span, '', class: "glyphicon glyphicon-#{name}"
+    content_tag :i, '', class: "fa fa-#{name}"
   end
 
   private
