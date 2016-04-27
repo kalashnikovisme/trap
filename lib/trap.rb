@@ -1,6 +1,4 @@
 require 'trap/version'
 require 'trap/helpers/bootstrap_helper'
 
-module Trap
-  include BootstrapHelper
-end
+ActionView::Base.send :include, BootstrapHelper
