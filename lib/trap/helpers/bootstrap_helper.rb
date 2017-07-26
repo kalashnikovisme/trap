@@ -32,7 +32,7 @@ module BootstrapHelper
   end
 
   def model_menu_item(model:, route:, icon: nil, number: nil)
-    title = model.is_a?(Class) ? model.model_model.human.pluralize(:ru) : model
+    title = model.is_a?(Class) ? model.model_name.human.pluralize(:ru) : model
     if icon
       menu_item route do
         concat icon_element icon
