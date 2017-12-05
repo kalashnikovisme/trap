@@ -1,6 +1,7 @@
 # Trap
 
-Bootstrap helpers
+Bootstrap helpers. Bootsrap 4.x compatible.
+Use `trap 1.x` for Bootstrap 3.x compatible.
 
 ## Installation
 
