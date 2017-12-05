@@ -2,49 +2,10 @@ module BootstrapHelper
   def menu_item(name = nil, path = '#', *args, &block)
     path = name || path if block_given?
     options = args.extract_options!
-    content_tag :li, class: is_active?(path, options) do
+    options[:class] = [options[:class], 'nav-link'].join(' ')
+    content_tag :li, class: "nav-item #{is_active?(path, options)}" do
       name, path = path, options if block_given?
       link_to name, path, options, &block
-    end
-  end
-
-  def dropdown(text, icon = nil, &block)
-    content_tag :li, class: :drowdown do
-      concat(link_to('#', class: 'dropdown-toggle', data: { toggle: :dropdown }) do
-	if icon
-	  concat icon_element icon
-	  concat ' '
-	end
-	concat text
-	unless icon
-	  concat ' '
-	  concat content_tag :span, '', class: :caret
-	end
-      end)
-      concat(content_tag(:ul, class: 'dropdown-menu') do
-	yield block
-      end)
-    end
-  end
-
-  def icon_element(name)
-    content_tag :i, '', class: "fa fa-#{name}"
-  end
-
-  def model_menu_item(model:, route:, icon: nil, number: nil)
-    title = model.is_a?(Class) ? model.model_name.human.pluralize(:ru) : model
-    if icon
-      menu_item route do
-        concat icon_element icon
-        concat ' '
-        concat title
-        if number && number != 0
-          concat ' '
-          concat(content_tag(:span, number.to_s, class: 'badge danger'))
-        end
-      end
-    else
-      menu_item title, route
     end
   end
 
