@@ -48,7 +48,7 @@ Using `menu_item` instead of
 </li>
 ```
 
-## For Bootstrap 
+## For Bootstrap 3
 
 You should use `trap-1.x` versions to include Bootstrap 3. Contributing to `bootstrap-3` branch.
 
