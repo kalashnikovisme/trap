@@ -47,6 +47,10 @@ Using `menu_item` instead of
 </li>
 ```
 
+## For Bootstrap 
+
+You should use `trap-1.x` versions to include Bootstrap 3. Contributing to `bootstrap-3` branch.
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/trap/fork )
