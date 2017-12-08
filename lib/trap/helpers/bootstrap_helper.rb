@@ -9,6 +9,23 @@ module BootstrapHelper
     end
   end
 
+  def model_menu_item(model:, route:, icon: nil, number: nil)
+    title = model.is_a?(Class) ? model.model_name.human.pluralize(:ru) : model
+    if icon
+      menu_item route do
+        concat icon_element icon
+        concat ' '
+        concat title
+        if number && number != 0
+          concat ' '
+          concat(content_tag(:span, number.to_s, class: 'badge danger'))
+        end
+      end
+    else
+      menu_item title, route
+    end
+  end
+
   private
 
   def is_active?(path, options = {})
