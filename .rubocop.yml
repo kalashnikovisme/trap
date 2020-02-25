@@ -1,0 +1,12 @@
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/AbcSize:
+  Max: 18
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+AllCops:
+  TargetRubyVersion: 2.7
