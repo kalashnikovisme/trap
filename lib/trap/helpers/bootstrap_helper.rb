@@ -31,6 +31,26 @@ module BootstrapHelper
     end
   end
 
+  def dropdown(text, icon = nil, &block)
+    content_tag :li, class: :drowdown do
+      concat(link_to('#', class: 'dropdown-toggle', data: { toggle: :dropdown }) do
+        if icon
+          concat content_tag :span, '', class: "glyphicon glyphicon-#{icon}"
+          concat ' '
+        end
+        concat text
+        unless icon
+          concat ' '
+          concat content_tag :span, '', class: :caret
+        end
+      end)
+      concat(content_tag(:ul, class: 'dropdown-menu') do
+        yield block
+      end)
+    end
+  end
+
+
   private
 
   def is_active?(path, options = {})
