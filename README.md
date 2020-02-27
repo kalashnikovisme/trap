@@ -1,6 +1,7 @@
 # Trap
 
 Bootstrap helpers. Bootstrap 4.x compatible.
+
 Use `trap 1.x` for Bootstrap 3.x compatible.
 
 ## Installation
@@ -29,7 +30,9 @@ module ApplicationHelper
 end
 ```
 
-List of methods you can use with Trap:
+## List of methods you can use with Trap
+
+### Menu items
 
 * menu_item
 Bootstrap navbar item
@@ -46,6 +49,24 @@ Using `menu_item` instead of
     ButtonText
   </a>
 </li>
+```
+
+* model_menu_item
+Bootstrap navbar item based on ActiveRecord
+
+```erb
+<%= model_menu_item model:, route:, icon:, number:, pluralize: %>
+```
+
+### Dropdown
+
+You can create dropdowns with something like this:
+
+```ruby
+= dropdown t("admin.navbar.links.#{item.keys.first}") do
+  = dropdown_item text, link
+  = dropdown_divider
+  = dropdown_model_item model: model, route: ::Tramway::Admin::Engine.routes.url_helpers.singleton_path(model: model)
 ```
 
 ## For Bootstrap 3
