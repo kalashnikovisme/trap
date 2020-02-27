@@ -1,4 +1,4 @@
-# Trap
+# Trap [![Build Status](https://github.com/kalashnikovisme/trap/workflows/Ruby/badge.svg)](https://github.com/kalashnikovisme/trap/actions)
 
 Bootstrap helpers. Bootstrap 4.x compatible.
 
