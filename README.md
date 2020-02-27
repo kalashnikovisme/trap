@@ -1,6 +1,7 @@
 # Trap
 
-Bootstrap helpers
+Bootstrap helpers. Bootstrap 4.x compatible.
+Use `trap 1.x` for Bootstrap 3.x compatible.
 
 ## Installation
 
@@ -47,7 +48,7 @@ Using `menu_item` instead of
 </li>
 ```
 
-## For Bootstrap 
+## For Bootstrap 3
 
 You should use `trap-1.x` versions to include Bootstrap 3. Contributing to `bootstrap-3` branch.
 
