@@ -90,8 +90,8 @@ module BootstrapHelper
       class: 'nav-link dropdown-toggle',
       id: text,
       role: :button,
-      data: { toggle: :dropdown },
-      aria: { haspopup: true, expanded: false }
+      data: { 'bs-toggle': :dropdown },
+      aria: { expanded: false }
     }
   end
 
